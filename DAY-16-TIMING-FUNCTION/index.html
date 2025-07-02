@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMING FUNCTION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+      <style>
+        .second{
+            animation: clock 1s infinite;
+            transform: rotateX(90deg);
+            transform-origin: top;    
+        }
+        @keyframes clock {
+            from{
+                 transform: rotateX(90deg);
+            }
+            to{
+                 transform: rotateX(0deg);
+            }
+        }
+
+        .minuteAnim{
+            animation: clock1 1s infinite;
+            transform: rotateX(90deg);
+            transform-origin: top;    
+        }
+        @keyframes clock1 {
+            from{
+                 transform: rotateX(90deg);
+            }
+            to{
+                 transform: rotateX(0deg);
+            }
+        }
+
+        .shake{
+            animation: shaking 0.1s infinite linear alternate;
+        }
+        @keyframes shaking {
+            from{
+                transform:  rotate(-10deg);
+            }
+            to{
+                transform:  rotate(10deg);
+            }
+        }
+    </style> 
+
+</head>
+<body>
+
+        <div class="container my-3">
+            <button class="btn btn-primary">count-<span class="badge text-bg-light counter">1</span></button> 
+            <button class="btn btn-sm btn-info stop">stop</button>
+        </div>
+
+
+        <div class="container my-5 border p-5">
+            <div class="shadow p-2 d-flex gap-1" style="width:200px;">
+                 <div class="rounded py-1 px-2 shadow border hour">02</div>
+                 <div class="rounded py-1 px-2 shadow border minutes">02</div>
+                 <div class="rounded py-1 px-2 shadow border second">24</div>
+            </div>
+        </div>
+
+
+
+        <div class="container my-2 p-5">
+            <div class="d-flex gap-2">
+                <input type="number" placeholder="Enter Time" class="form-control form-control-sm timenumber"> <button class="btn btn-sm btn-info start" onclick="startTimer()">start</button>
+            </div>
+            <img src="https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/26330036/2023/12/8/d40f9bfb-4142-46df-98bc-16011a2429831702039441285CHRONIKLEBrownTraditionalWallClock1.jpg" style="width: 200px;" class="m-5" id="clock" alt="">
+            <audio src="alerm/kalki.mp3" id="aud"></audio>
+        </div>
+    
+</body>
+<script src="script.js"></script>
+
+
+
+
+<script>
+    let counter = document.querySelector(".counter");
+    let stop = document.querySelector(".stop");
+
+
+    let alert = setTimeout(setTimeout, 4000)
+    function timeout(){
+
+    }
+
+
+    let count = 1
+
+   let timer = setInterval(function(){
+     count++;
+    counter.textContent = count;
+   }, 1000);
+
+
+       stop.onclick = function(){
+       clearInterval(timer)
+       clearTimeout(alert)
+    }
+
+</script>
+</html>
