@@ -3,29 +3,41 @@
 // adding element to an array in last
 
 
-const fruits = ["scorpio", "audi", "thar", "marcedise", "lambergini"]
+const car = ["scorpio", "audi", "thar", "marcedise", "lambergini"]
 
-console.log(fruits.length, fruits)
-
-// <------------------!--------------->
-
-fruits.push("rolls royals")
-console.log(fruits.length, fruits)
-
+console.log(car.length, car)
 
 // <------------------!--------------->
 
-fruits.unshift("volvo")
-console.log(fruits.length, fruits)
+car.push("rolls royals")
+console.log(car.length, car)
 
 
 // <------------------!--------------->
 
-fruits.pop()
-console.log(fruits.length, fruits)
+car.unshift("volvo")
+console.log(car.length, car)
 
 
 // <------------------!--------------->
 
-fruits
+car.pop()
+console.log(car.length, car)
+
+
+// <------------------!--------------->
+
+car.shift()
+console.log(car.length, car)
+
+// <------------------!--------------->
+
+car.splice(2, 0, "swift", "fortuner")
+console.log(car.length, car)
+
+// <------------------!--------------->
+car.splice(4, 2)
+console.log(car.length, car)
+
+// <------------------!--------------->
 
