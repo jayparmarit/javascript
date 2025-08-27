@@ -11,16 +11,16 @@
 
 
 
-// const greeting = () => {
-//     console.log("function show after 5 second");
-//     setTimeout(()=>{
-//         console.log("hellow jayyyy")
-//     },2000);
-// } 
+const greeting = () => {
+    console.log("function show after 5 second");
+    setTimeout(()=>{
+        console.log("hellow jayyyy")
+    },2000);
+} 
 
-// greeting();
+greeting();
 
-// <------------------------------------>
+// <----------------------------------------->
 
 const CurrentYear = () => {
     console.log("current year => ");
