@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie search api</title>
+    <script src="script.js" defer></script>
+</head>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: black;
+        }
+
+        #movies{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+           overflow-x: scroll;
+            color: white;
+            text-align: center;
+        }
+        h1{
+            color: white;
+             background-color: burlywood;
+            text-align: center;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size:30px; 
+        } 
+
+        .frame{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+
+        }
+        button{
+            padding: 15px;
+            border-radius: 20px;
+            border: none;
+            background-color: darkgray;
+        }
+        button:hover{
+            background-color: rgb(99, 94, 94);
+        }
+        input{
+           padding: 15px;
+            border-radius: 20px;
+            font-size: 15px;
+             border: none;
+        }
+
+        #moviesDiv {
+           display: flex;
+           /* flex-wrap:  wrap;     */
+              gap: 20px;
+              /* flex-direction: column; */
+              overflow-x: auto;
+           justify-content: center;
+           align-items: center;
+        }
+    </style>
+
+<body>
+
+   
+          <h1>Movie Search App</h1>  
+
+        <div class="frame">
+
+
+               
+
+                     <input type="text" placeholder="enter movie name" id="search">
+                     <button onclick="searchMovie()">submit</button>
+
+                         
+
+        </div>
+
+          <div id="movies">
+            <div>
+                <h2>Movie List</h2>
+                <div id="moviesDiv"></div>
+            </div>
+          </div>  
+
+        
+       
+        
+       
+</body>
+</html>
