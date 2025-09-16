@@ -7,13 +7,27 @@
 // a callback function it runs after another function has finished
 // when you pass functions as an arguments don't use parenthesis
 
-function callbackFunc(result){
-    console.log("total", result);
+// callback example
+
+// function CallbackFun(result){
+//     console.log("sum total:",result)
+// }
+
+
+// function TotalSum(a, b, CallbackFun){
+//     const result = a+b;
+//     CallbackFun(result);
+// }
+
+// TotalSum(445,2250,CallbackFun)
+
+// <-------------------------------->
+
+function TotalSum(a,b,CallbackFun){
+    const result = a+b;
+    CallbackFun(result)
 }
 
-function totalSumOfNumbers(a, b, callbackFunc){
-    let result = a + b;
-    callbackFunc(result)
-}
-
-totalSumOfNumbers(23, 54, callbackFunc);
+TotalSum(554,356,(a)=>{
+    console.log("totla sum:",a);
+})
