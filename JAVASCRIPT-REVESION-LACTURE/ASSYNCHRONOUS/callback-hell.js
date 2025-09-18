@@ -61,15 +61,3 @@ payment(1500, (err, amount) => {
   }
 });
 
-// Explanation of the Code
-// Asynchronous Functions:
-
-// payment(), checkBalance(), and ifPaymentDone() now use setTimeout to simulate asynchronous behavior.
-// Callbacks with Error Handling:
-
-// Each function accepts a callback that follows the common pattern of (err, result). If there's an error, it calls the callback with the error message; otherwise, it proceeds to the next function.
-// Demonstrating Callback Hell:
-
-// The nested structure shows how each function depends on the previous one, making the code grow horizontally and harder to read.
-
-// to overcome this problem we can use promise
