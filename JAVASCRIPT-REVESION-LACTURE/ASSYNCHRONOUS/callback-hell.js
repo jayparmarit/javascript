@@ -41,7 +41,7 @@ function ifPaymentDone(amount, callback) {
 }
 
 // Demonstrating callback hell
-payment(1500, (err, amount) => {
+payment(3000, (err, amount) => {
   if (err) {
     console.error(err);
   } else {
